@@ -1,0 +1,103 @@
+<section>
+    <div class="contact-us">
+        <div style="text-align: center; padding-top: 150px;">
+            <h1>We’d love to hear from you</h1>
+            <p>Whether you have a question about LMS, pricing, need a demo, or anything else, we are ready to answer it
+                all </p>
+        </div>
+    </div>
+</section>
+
+<div class="container">
+    <section id="contact">
+    <div class="row">
+        <div class="col-sm-6">
+            <div>
+                <h3>Sales and Support Enquiries</h3>
+                <p>Interested in any of our Courses/Using any of our courses and need help? Talk to our experts today
+                </p>
+
+                <p>Contact No: +91-9835401515</p>
+
+                <p>Email: sales@pixeltk.com | info@pixeltk.com</p>
+
+                <hr>
+                <div>
+                    <h3>Address</h3>
+                    <p># D 76, 1st floor, Shiv Tenament, Opp Felix Complex, Gotri road, Gotri, Vadodara,
+                        Gujarat 390021</p>
+                </div>
+
+            </div>
+
+
+
+        </div>
+        <div class="col-sm-6">
+            <form [formGroup]="addressForm" novalidate (ngSubmit)="onSubmit()">
+                <mat-card class="shipping-card">
+                    <mat-card-header>
+                        <mat-card-title>Contact Us</mat-card-title>
+                    </mat-card-header>
+                    <mat-card-content>
+
+                        <div class="row">
+                            <div class="col">
+                                <mat-form-field class="full-width">
+                                    <input matInput placeholder="First name" formControlName="firstName">
+                                    <mat-error *ngIf="addressForm.controls['firstName'].hasError('required')">
+                                        First name is <strong>required</strong>
+                                    </mat-error>
+                                </mat-form-field>
+                            </div>
+                            <div class="col">
+                                <mat-form-field class="full-width">
+                                    <input matInput placeholder="Last name" formControlName="lastName">
+                                    <mat-error *ngIf="addressForm.controls['lastName'].hasError('required')">
+                                        Last name is <strong>required</strong>
+                                    </mat-error>
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <mat-form-field class="full-width">
+                                    <input matInput placeholder="Email" formControlName="email">
+                                    <mat-error *ngIf="addressForm.controls['email'].hasError('required')">
+                                        Email is <strong>required</strong>
+                                    </mat-error>
+                                </mat-form-field>
+                            </div>
+                            <div class="col">
+                                <mat-form-field class="full-width">
+                                    <input matInput placeholder="Mobile No" formControlName="mobile">
+                                    <mat-error *ngIf="addressForm.controls['mobile'].hasError('required')">
+                                        Mobile is <strong>required</strong>
+                                    </mat-error>
+                                </mat-form-field>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col">
+                                <mat-form-field class="full-width">
+                                    <textarea matInput placeholder="Comment" formControlName="address"></textarea>
+                                    <mat-error *ngIf="addressForm.controls['address'].hasError('required')">
+                                        Address is <strong>required</strong>
+                                    </mat-error>
+                                </mat-form-field>
+                            </div>
+                        </div>
+                    </mat-card-content>
+                    <mat-card-actions>
+                        <button mat-raised-button color="primary" type="submit">Submit</button>
+                    </mat-card-actions>
+                </mat-card>
+            </form>
+
+
+        </div>
+    </div>
+</section>
+</div>
+<app-footer></app-footer>

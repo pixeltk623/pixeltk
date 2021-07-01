@@ -1,0 +1,20 @@
+.callAndEmail {
+    flex-direction: row;
+    box-sizing: border-box;
+    display: flex;
+    margin-bottom: 20px;
+
+}
+
+.enquiry {
+    background-color: #686894;
+    width: 100%; 
+    height: 450px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 780px){
+    .enquiry {
+     
+        height: 850px;
+    }
+}
