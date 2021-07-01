@@ -1,3 +1,20 @@
+
+  .checked {
+    color: orange;
+   
+  }
+
+  .star-style ul li{
+      list-style-type: none;
+     
+  }
+
+  .title-style{
+      color: green;
+      margin-top: 15px;
+      margin-bottom: 10px;
+     
+  }
 h1 {
     font-size: 38px;
     font-weight: 600;
