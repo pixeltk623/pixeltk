@@ -97,6 +97,10 @@ ul#key li {
     .course_details {
         width: 100%;
     }
+
+    #course_head {
+        font-size: 10px;
+    }
 }
 
 @media screen and (min-width: 320px) and (max-width: 480px) {
