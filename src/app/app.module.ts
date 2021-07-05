@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -39,6 +39,12 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { DialogComponent } from './dialog/dialog.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 
+// import { NgProgressModule } from 'ngx-progressbar';
+// import { HttpClientModule } from '@angular/common/http';
+  
+
+import { LoadingBarRouterModule } from '@ngx-loading-bar/router';
+import { NgxSpinnerModule, NgxSpinnerService } from "ngx-spinner";
 
 @NgModule({
   declarations: [
@@ -87,8 +93,20 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
     MatSidenavModule,
     MatListModule,
     MatProgressBarModule,
+
+    // NgProgressModule,
+    // HttpClientModule,
+    LoadingBarRouterModule,
+
+    NgxSpinnerModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
-export class AppModule { }
+export class AppModule { 
+  
+ 
+
+  }
+
