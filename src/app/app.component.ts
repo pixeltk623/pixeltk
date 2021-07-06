@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { NgxSpinnerService } from 'ngx-spinner';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -8,23 +7,4 @@ import { NgxSpinnerService } from 'ngx-spinner';
 })
 export class AppComponent {
   title = 'pixeltk';
-  spinnerType: any;
-  spinnerName: any;
-
-  
-  constructor(private spinner: NgxSpinnerService) {
-    
-    
-    this.spinnerName= 'sp1';
-    this.spinnerType= 'ball-clip-rotate-single';
-
-
-    this.spinner.show();
-
-    setTimeout(() => {
-      /** spinner ends after 5 seconds */
-      this.spinner.hide();
-    }, 1000);
-  }
-
 }
