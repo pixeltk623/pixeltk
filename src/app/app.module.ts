@@ -43,8 +43,8 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 // import { HttpClientModule } from '@angular/common/http';
   
 
-import { LoadingBarRouterModule } from '@ngx-loading-bar/router';
-import { NgxSpinnerModule, NgxSpinnerService } from "ngx-spinner";
+// import { LoadingBarRouterModule } from '@ngx-loading-bar/router';
+// import { NgxSpinnerModule, NgxSpinnerService } from "ngx-spinner";
 
 @NgModule({
   declarations: [
@@ -96,13 +96,13 @@ import { NgxSpinnerModule, NgxSpinnerService } from "ngx-spinner";
 
     // NgProgressModule,
     // HttpClientModule,
-    LoadingBarRouterModule,
+    // LoadingBarRouterModule,
 
-    NgxSpinnerModule,
+    // NgxSpinnerModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA],
+  // schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class AppModule { 
   
