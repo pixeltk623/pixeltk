@@ -1,0 +1,83 @@
+h1 {
+    font-size: 38px;
+    font-weight: 600;
+    letter-spacing: .58px;
+    color: #2672cb;
+    margin-left: 12px;
+}
+
+.course_details {
+    background-image: url(https://www.teqstories.com/certificet.5dce65c31b3465e0d9c8.png);
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
+    padding-bottom: 40px;
+    background-size: 140px;
+    width: 50%;
+}
+
+ul li {
+    opacity: .81;
+    font-size: 16px;
+    letter-spacing: .22px;
+    color: rgba(18, 14, 61, .8);
+    margin-bottom: 8px;
+}
+
+ul#key li {
+    display: inline-block;
+    font-size: 16px;
+    letter-spacing: .23px;
+    color: rgba(18, 14, 61, .8);
+    background-image: url(https://www.teqstories.com/star.7dfba54f14611c6d50c3.png);
+    background-repeat: no-repeat;
+    width: calc(50% - 28px);
+    padding-left: 28px;
+    background-size: 18px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    vertical-align: top;
+}
+.underLine {
+    border-radius: 4px;
+    background-color: #eaeef5;
+    width: 100px;
+    height: 4px;
+    display: block;
+    margin-top: 10px;
+}
+
+.upcoming_batch_details {
+    background-size: 100% 100%;
+    border-radius: 30px;
+    padding: 30px 50px;
+}
+
+#advisors {
+    font-family: HelveticaNeue;
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 1.53;
+    color: #fff;
+    margin-bottom: 10px;
+}
+.divider {
+    width: 1px;
+    margin: 1px 0;
+    background: blue;
+  }
+.price {
+    font-size: 44px;
+    font-weight: 400;
+    color: #fff;
+    margin-bottom: 4px;
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+    .upcoming_batch_details {
+        padding: 0;
+        border-radius: 52px;
+    }
+
+    .course_details {
+        width: 100%;
+    }
+}
