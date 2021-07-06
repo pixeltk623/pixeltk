@@ -10,6 +10,7 @@ import { environment } from '../../environments/environment.prod';
 })
 export class MainComponent implements OnInit {
   public baseUrl:string = environment.firebase.baseUrl;
+  public status:boolean=false;
   constructor(private route:Router) { 
     //console.log(environment.baseUrl);
   }
@@ -22,4 +23,18 @@ export class MainComponent implements OnInit {
     this.route.navigate(['courses/angular-certification-training-course']);
   }
 
+  submit(){
+    this.status=false;
+  }
+
+
+
+login(){
+   console.log('hello');
+   this.status=true;
+}
+
+  logOut(){
+    this.status=false;
+ }
 }
