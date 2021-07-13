@@ -10,6 +10,8 @@ import { PhpCertificationTrainingCourseComponent } from './php-certification-tra
 import { NotFoundComponent } from './not-found/not-found.component';
 import { EnquiryComponent } from './enquiry/enquiry.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+import { BlogComponent } from './blog/blog.component';
+import { PopupComponent } from './popup/popup.component';
 
 const routes: Routes = [
   { path: '', component: MainComponent },
@@ -21,6 +23,10 @@ const routes: Routes = [
   { path: 'courses/laravel-certification-training-course', component: LaravelCertificationTrainingCourseComponent },
   { path: 'enquiry', component: EnquiryComponent },
   { path: 'contact-us', component: ContactUsComponent },
+  { path: 'blog', component:BlogComponent},
+  { path: 'popup', component:PopupComponent},
+  
+
   { path: '**', component: NotFoundComponent }
 
 ];
