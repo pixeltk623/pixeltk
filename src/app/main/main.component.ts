@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from '../../environments/environment.prod';
+import {MatDialog} from '@angular/material/dialog';
+import { PopupComponent } from '../popup/popup.component';
 
 
 @Component({
@@ -11,12 +13,29 @@ import { environment } from '../../environments/environment.prod';
 export class MainComponent implements OnInit {
   public baseUrl:string = environment.firebase.baseUrl;
   public status:boolean=false;
-  constructor(private route:Router) { 
+  constructor(private route:Router,public dialog: MatDialog) { 
     //console.log(environment.baseUrl);
   }
 
   ngOnInit(): void {
   }
+
+  ngAfterViewInit(){
+    setTimeout( ()=>{
+    this.openDialog()
+    }, 5000)
+  }
+ 
+ 
+   openDialog() {
+     const dialogRef = this.dialog.open(PopupComponent);
+ 
+     dialogRef.afterClosed().subscribe(result => {
+       console.log(`Dialog result: ${result}`);
+     });
+   }
+
+  
 
   angularCourse() {
     //console.log("Hello")
