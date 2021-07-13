@@ -43,8 +43,15 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 // import { HttpClientModule } from '@angular/common/http';
   
 
+<<<<<<< Updated upstream
 // import { LoadingBarRouterModule } from '@ngx-loading-bar/router';
 // import { NgxSpinnerModule, NgxSpinnerService } from "ngx-spinner";
+=======
+import { LoadingBarRouterModule } from '@ngx-loading-bar/router';
+import { NgxSpinnerModule, NgxSpinnerService } from "ngx-spinner";
+// import {Component} from '@angular/core';
+
+>>>>>>> Stashed changes
 
 @NgModule({
   declarations: [
@@ -98,15 +105,25 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
     // HttpClientModule,
     // LoadingBarRouterModule,
 
+<<<<<<< Updated upstream
     // NgxSpinnerModule,
+=======
+    NgxSpinnerModule,
+    // Component
+>>>>>>> Stashed changes
   ],
   providers: [],
   bootstrap: [AppComponent],
   // schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
-export class AppModule { 
+
+export class AppModule  { 
   
  
 
   }
-
+  // @Component({
+  //   selector: 'progress-bar-indeterminate-example',
+  //   templateUrl: 'progress-bar-indeterminate-example.html',
+  // })
+  // export class ProgressBarIndeterminateExample {}
