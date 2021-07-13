@@ -38,20 +38,17 @@ import { LaravelCertificationTrainingCourseComponent } from './laravel-certifica
 import { NotFoundComponent } from './not-found/not-found.component';
 import { DialogComponent } from './dialog/dialog.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+// import { LoadingBarModule } from '@ngx-loading-bar/core';
+
 
 // import { NgProgressModule } from 'ngx-progressbar';
 // import { HttpClientModule } from '@angular/common/http';
   
 
-<<<<<<< Updated upstream
-// import { LoadingBarRouterModule } from '@ngx-loading-bar/router';
-// import { NgxSpinnerModule, NgxSpinnerService } from "ngx-spinner";
-=======
 import { LoadingBarRouterModule } from '@ngx-loading-bar/router';
-import { NgxSpinnerModule, NgxSpinnerService } from "ngx-spinner";
-// import {Component} from '@angular/core';
+// import { NgxSpinnerModule, NgxSpinnerService } from "ngx-spinner";
+import { NgxSpinnerModule } from "ngx-spinner";
 
->>>>>>> Stashed changes
 
 @NgModule({
   declarations: [
@@ -100,21 +97,17 @@ import { NgxSpinnerModule, NgxSpinnerService } from "ngx-spinner";
     MatSidenavModule,
     MatListModule,
     MatProgressBarModule,
+    // LoadingBarModule,
 
     // NgProgressModule,
     // HttpClientModule,
-    // LoadingBarRouterModule,
+    LoadingBarRouterModule,
 
-<<<<<<< Updated upstream
-    // NgxSpinnerModule,
-=======
     NgxSpinnerModule,
-    // Component
->>>>>>> Stashed changes
   ],
   providers: [],
   bootstrap: [AppComponent],
-  // schemas: [CUSTOM_ELEMENTS_SCHEMA],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 
 export class AppModule  { 
