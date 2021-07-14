@@ -12,6 +12,7 @@ import { EnquiryComponent } from './enquiry/enquiry.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { BlogComponent } from './blog/blog.component';
 import { PopupComponent } from './popup/popup.component';
+import { QuickPopupComponent } from './quick-popup/quick-popup.component';
 
 const routes: Routes = [
   { path: '', component: MainComponent },
@@ -25,6 +26,7 @@ const routes: Routes = [
   { path: 'contact-us', component: ContactUsComponent },
   { path: 'blog', component:BlogComponent},
   { path: 'popup', component:PopupComponent},
+  { path: 'quick-popup', component:QuickPopupComponent},
   
 
   { path: '**', component: NotFoundComponent }
