@@ -4,6 +4,7 @@ import { environment } from '../../environments/environment.prod';
 import {MatDialog} from '@angular/material/dialog';
 import { DialogComponent } from '../dialog/dialog.component';
 import { PopupComponent } from '../popup/popup.component';
+import { QuickPopupComponent } from '../quick-popup/quick-popup.component';
 
 
 @Component({
@@ -46,6 +47,16 @@ export class MainComponent implements OnInit {
   submit(){
     this.status=false;
   }
+
+
+  quickOpenDialog() {
+    const dialogRef = this.dialog.open(QuickPopupComponent);
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+    });
+  }
+
 
 
 
