@@ -38,11 +38,12 @@ import { LaravelCertificationTrainingCourseComponent } from './laravel-certifica
 import { NotFoundComponent } from './not-found/not-found.component';
 import { DialogComponent } from './dialog/dialog.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+import {FormsModule} from '@angular/forms';
+
 // import { LoadingBarModule } from '@ngx-loading-bar/core';
 
 
-// import { NgProgressModule } from 'ngx-progressbar';
-// import { HttpClientModule } from '@angular/common/http';
+
   
 
 import { LoadingBarRouterModule } from '@ngx-loading-bar/router';
@@ -67,7 +68,8 @@ import { NgxSpinnerModule } from "ngx-spinner";
     LaravelCertificationTrainingCourseComponent,
     NotFoundComponent,
     DialogComponent,
-    ContactUsComponent
+    ContactUsComponent,
+    
   ],
   entryComponents:[DialogComponent],
   imports: [
@@ -97,6 +99,7 @@ import { NgxSpinnerModule } from "ngx-spinner";
     MatSidenavModule,
     MatListModule,
     MatProgressBarModule,
+   
     // LoadingBarModule,
 
     // NgProgressModule,
@@ -104,19 +107,14 @@ import { NgxSpinnerModule } from "ngx-spinner";
     LoadingBarRouterModule,
 
     NgxSpinnerModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
-
-export class AppModule  { 
+export class AppModule { 
   
  
 
   }
-  // @Component({
-  //   selector: 'progress-bar-indeterminate-example',
-  //   templateUrl: 'progress-bar-indeterminate-example.html',
-  // })
-  // export class ProgressBarIndeterminateExample {}
