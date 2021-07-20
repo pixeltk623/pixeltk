@@ -40,11 +40,7 @@ import { DialogComponent } from './dialog/dialog.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import {FormsModule} from '@angular/forms';
 
-// import { LoadingBarModule } from '@ngx-loading-bar/core';
-
-
-
-  
+import { LivechatWidgetModule } from '@livechat/angular-widget';
 
 import { LoadingBarRouterModule } from '@ngx-loading-bar/router';
 // import { NgxSpinnerModule, NgxSpinnerService } from "ngx-spinner";
@@ -99,15 +95,11 @@ import { NgxSpinnerModule } from "ngx-spinner";
     MatSidenavModule,
     MatListModule,
     MatProgressBarModule,
-   
-    // LoadingBarModule,
-
-    // NgProgressModule,
-    // HttpClientModule,
     LoadingBarRouterModule,
-
     NgxSpinnerModule,
-    FormsModule
+    FormsModule,
+    LivechatWidgetModule 
+    
   ],
   providers: [],
   bootstrap: [AppComponent],
