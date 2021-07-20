@@ -41,25 +41,39 @@
                     <div class="card mt-5">
                         <div class="card-body">
                             <h5 class="card-title text-muted text-center">Please Share the details</h5>
-                            <div class="mb-3">
-                                <label for="exampleFormControlInput1" class="form-label">Name</label>
-                                <input type="email" class="form-control" id="exampleFormControlInput1"
-                                    placeholder="Name">
-                            </div>
-                            <div class="mb-3">
-                                <label for="exampleFormControlInput1" class="form-label">Email</label>
-                                <input type="email" class="form-control" id="exampleFormControlInput1"
-                                    placeholder="Email">
-                            </div>
-                            <div class="mb-3">
-                                <label for="exampleFormControlInput1" class="form-label">Mobile</label>
-                                <input type="email" class="form-control" id="exampleFormControlInput1"
-                                    placeholder="Mobile">
-                            </div>
-                            <div class="mb-3 text-center">
-                                <button class="btn btn-primary">Submit</button>
-                            </div>
 
+                            <!-- {{modelOfEnquiry | json}}
+                            <hr>
+
+                            {{enquiryForm.value | json}} -->
+
+                            <!-- {{enquiryForm.valid | json}} -->
+                            <form (ngSubmit)="onSubmit()" #enquiryForm="ngForm">
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label">Name</label>
+                                    <input type="text" [class.is-invalid] = "name.invalid && name.touched" class="form-control" id="exampleFormControlInput1"
+                                        placeholder="Name" name="name" [(ngModel)]="modelOfEnquiry.name" #name="ngModel" required>
+                                    
+                                    <span [class.d-none]="name.valid || name.untouched" class="text-danger">Name is Required</span>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label">Email</label>
+                                    <input type="email" [class.is-invalid] = "email.invalid && email.touched" class="form-control" id="exampleFormControlInput1"
+                                        placeholder="Email" name="email" [(ngModel)]="modelOfEnquiry.email" #email="ngModel" required>
+
+                                        <span [class.d-none]="email.valid || email.untouched" class="text-danger">Email is Required</span>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label">Mobile</label>
+                                    <input type="text" [class.is-invalid] = "mobile.invalid && mobile.touched" class="form-control" name="mobile" id="exampleFormControlInput1"
+                                        placeholder="Mobile" [(ngModel)]="modelOfEnquiry.mobile" #mobile="ngModel" required>
+
+                                        <span [class.d-none]="mobile.valid || mobile.untouched" class="text-danger">Mobile is Required</span>
+                                </div>
+                                <div class="mb-3 text-center">
+                                    <button class="btn btn-primary" [class.disabled]="enquiryForm.valid==false">Submit</button>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
