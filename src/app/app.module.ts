@@ -38,12 +38,6 @@ import { LaravelCertificationTrainingCourseComponent } from './laravel-certifica
 import { NotFoundComponent } from './not-found/not-found.component';
 import { DialogComponent } from './dialog/dialog.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
-<<<<<<< Updated upstream
-import {FormsModule} from '@angular/forms';
-=======
-import { LivechatWidgetModule } from '@livechat/angular-widget';
-// import { LoadingBarModule } from '@ngx-loading-bar/core';
->>>>>>> Stashed changes
 
 import { LivechatWidgetModule } from '@livechat/angular-widget';
 
@@ -70,11 +64,7 @@ import { NgxSpinnerModule } from "ngx-spinner";
     NotFoundComponent,
     DialogComponent,
     ContactUsComponent,
-<<<<<<< Updated upstream
     
-=======
-   
->>>>>>> Stashed changes
   ],
   entryComponents:[DialogComponent],
   imports: [
@@ -103,22 +93,11 @@ import { NgxSpinnerModule } from "ngx-spinner";
     MatSidenavModule,
     MatListModule,
     MatProgressBarModule,
-<<<<<<< Updated upstream
-=======
-    LivechatWidgetModule,
-    // LoadingBarModule,
-
-    // NgProgressModule,
-    // HttpClientModule,
->>>>>>> Stashed changes
     LoadingBarRouterModule,
     NgxSpinnerModule,
     FormsModule,
-<<<<<<< Updated upstream
     LivechatWidgetModule 
     
-=======
->>>>>>> Stashed changes
   ],
   providers: [],
   bootstrap: [AppComponent],
