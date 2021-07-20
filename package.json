@@ -24,11 +24,7 @@
     "@ngx-loading-bar/core": "^5.1.2",
     "@ngx-loading-bar/router": "^5.1.2",
     "angular-loading-bar": "^0.9.0",
-<<<<<<< Updated upstream
     "angular-tawk": "0.0.4",
-=======
-    "angular-tawk": "^0.0.4",
->>>>>>> Stashed changes
     "bootstrap": "^5.0.2",
     "ngx-bootstrap": "^6.2.0",
     "ngx-spinner": "^12.0.0",
