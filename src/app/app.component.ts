@@ -21,7 +21,7 @@ export class AppComponent implements OnInit, OnDestroy {
   spinnerType: any;
   spinnerName: any;
  
-  licenseId:number= 12967557;
+  licenseId:any= "60f13155d6e7610a49ab8a47"
 
   constructor(private spinner: NgxSpinnerService) { }
 

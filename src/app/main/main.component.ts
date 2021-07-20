@@ -31,7 +31,7 @@ export class MainComponent implements OnInit {
   ngAfterViewInit(){
     setTimeout( ()=>{
     this.openDialog()
-    }, 500000)
+    }, 5000)
   }
  
  
