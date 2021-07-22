@@ -42,7 +42,7 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { LivechatWidgetModule } from '@livechat/angular-widget';
 
 import { LoadingBarRouterModule } from '@ngx-loading-bar/router';
-// import { NgxSpinnerModule, NgxSpinnerService } from "ngx-spinner";
+
 import { NgxSpinnerModule } from "ngx-spinner";
 
 
