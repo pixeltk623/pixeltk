@@ -96,7 +96,8 @@ import { NgxSpinnerModule } from "ngx-spinner";
     LoadingBarRouterModule,
     NgxSpinnerModule,
     FormsModule,
-    LivechatWidgetModule 
+    LivechatWidgetModule,
+    
     
   ],
   providers: [],

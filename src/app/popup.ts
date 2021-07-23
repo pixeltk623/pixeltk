@@ -3,7 +3,7 @@ export class Popup {
         
         public name: string,
         public email: string,
-        public mobile: string,
+        public mobile: string
       
     ){}
 }
