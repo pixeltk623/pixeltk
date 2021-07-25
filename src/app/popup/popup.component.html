@@ -3,40 +3,40 @@
         <div class="card-body">
             <h5 class="card-title text-muted text-center">Request A Call Back</h5>
 
-            <form (ngSubmit)="onSubmit()" >
+            <form (ngSubmit)="onSubmit()" #popupForm="ngForm">
 
                 <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Name</label>
-                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Name" name="name"
-                        required>
+                    <input type="text" [class.is-invalid]="name.invalid && name.touched" class="form-control" id="exampleFormControlInput1"
+                        placeholder="Name" name="name" [(ngModel)]="modelOfPopup.name" #name="ngModel" required>
 
-                    <!-- <span [class.d-none]="name.valid || name.untouched" class="text-danger">Name is Required</span> -->
+                        <span [class.d-none]="name.valid || name.untouched" class="text-danger">Name is Required</span>
                 </div>
 
 
                 <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Email</label>
-                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Email"
-                        name="email" required>
+                    <input type="email"  [class.is-invalid]="email.invalid && email.touched"  class="form-control" id="exampleFormControlInput1"
+                        placeholder="Email" name="email" [(ngModel)]="modelOfPopup.email" #email="ngModel" required>
 
-                    <!-- <span [class.d-none]="email.valid || email.untouched" class="text-danger">Email is Required</span> -->
+                        <span [class.d-none]="email.valid || email.untouched" class="text-danger">Email is Required</span>
                 </div>
 
 
                 <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Mobile</label>
-                    <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="Mobile"
-                        name="mobile" required>
+                    <input type="number" [class.is-invalid]="mobile.invalid && mobile.touched"  class="form-control" id="exampleFormControlInput1"
+                        placeholder="Mobile" name="mobile" [(ngModel)]="modelOfPopup.mobile" #mobile="ngModel" required>
 
-                    <!-- <span [class.d-none]="mobile.valid || mobile.untouched" class="text-danger">Mobile number is Required</span> -->
+                        <span [class.d-none]="mobile.valid || mobile.untouched" class="text-danger">Mobile number is Required</span>
                 </div>
                 <div class="mb-3 text-center">
-                    <button class="btn btn-primary">Submit</button>
+                    <button class="btn btn-primary" [class.disabled]="popupForm.valid==false">Submit</button>
                 </div>
 
             </form>
-
+            
 
         </div>
     </div>
-</div>
+</div> 

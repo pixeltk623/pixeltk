@@ -10,7 +10,7 @@ export class PopupComponent implements OnInit {
 
   constructor() { }
 
-  modelOfPopup = new Popup('','','');
+  modelOfPopup = new Popup('','','',);
 
   isdisabled:boolean =true;
 

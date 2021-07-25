@@ -44,6 +44,9 @@ import { LivechatWidgetModule } from '@livechat/angular-widget';
 import { LoadingBarRouterModule } from '@ngx-loading-bar/router';
 
 import { NgxSpinnerModule } from "ngx-spinner";
+import { BlogComponent } from './blog/blog.component';
+import { PopupComponent } from './popup/popup.component';
+import { QuickPopupComponent } from './quick-popup/quick-popup.component';
 
 
 @NgModule({
@@ -64,6 +67,9 @@ import { NgxSpinnerModule } from "ngx-spinner";
     NotFoundComponent,
     DialogComponent,
     ContactUsComponent,
+    BlogComponent,
+    PopupComponent,
+    QuickPopupComponent
     
   ],
   entryComponents:[DialogComponent],
