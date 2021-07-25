@@ -47,6 +47,7 @@ import { NgxSpinnerModule } from "ngx-spinner";
 import { BlogComponent } from './blog/blog.component';
 import { PopupComponent } from './popup/popup.component';
 import { QuickPopupComponent } from './quick-popup/quick-popup.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -103,6 +104,7 @@ import { QuickPopupComponent } from './quick-popup/quick-popup.component';
     NgxSpinnerModule,
     FormsModule,
     LivechatWidgetModule,
+    HttpClientModule,
     
     
   ],

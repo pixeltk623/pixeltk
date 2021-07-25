@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Popup } from '../popup';
+import {PopService} from '../pop.service'
 
 @Component({
   selector: 'app-popup',
@@ -8,7 +9,7 @@ import { Popup } from '../popup';
 })
 export class PopupComponent implements OnInit {
 
-  constructor() { }
+  constructor(private popService:PopService) { }
 
   modelOfPopup = new Popup('','','',);
 
@@ -19,7 +20,17 @@ export class PopupComponent implements OnInit {
   }
 
   onSubmit(){
-    console.log(this.modelOfPopup);
+    /* console.log(this.modelOfPopup); */
+    let formdata:any ={
+      "FullName" : this.modelOfPopup.name,
+      "ContactNumber": this.modelOfPopup.mobile,
+      "Email": this.modelOfPopup.email
+      };
+    this.popService.postPopupFormData(formdata).subscribe(
+      data => {
+        console.log(data);
+      }
+    )
   }
 
 }
