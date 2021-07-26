@@ -16,7 +16,7 @@ export class AngularCertificationTrainingCourseComponent implements OnInit {
   spinnerType: any;
   spinnerName: any;
   // public baseUrl:string = "https://shreetuitioncenter.com/";
-  public apiUrl:string ="https://www.pixeltk.com/api/";
+  
   
   constructor(private spinner: NgxSpinnerService,private coursesService:CoursesService) { }
 
