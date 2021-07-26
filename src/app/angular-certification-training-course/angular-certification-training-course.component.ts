@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { environment } from 'src/environments/environment.prod';
 import { NgxSpinnerService } from 'ngx-spinner';
+import { Courses } from '../courses';
 
 @Component({
   selector: 'app-angular-certification-training-course',
@@ -15,8 +16,17 @@ export class AngularCertificationTrainingCourseComponent implements OnInit {
   // public baseUrl:string = "https://shreetuitioncenter.com/";
   constructor(private spinner: NgxSpinnerService) { }
 
+  modelOfCourses = new Courses('','');
+
+  isdisabled:boolean = true;
+
+  onSubmit(){
+    console.log(this.modelOfCourses);
+  }
+
   ngOnInit(): void {
     this.spinner.show();
+    console.log(this.modelOfCourses)
 
     setTimeout(() => {
       /** spinner ends after 5 seconds */
