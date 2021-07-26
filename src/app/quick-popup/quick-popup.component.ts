@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { QuickPopup } from '../quick-popup';
+import { QuickService } from '../quick.service';
 
 @Component({
   selector: 'app-quick-popup',
@@ -9,7 +10,7 @@ import { QuickPopup } from '../quick-popup';
 export class QuickPopupComponent implements OnInit {
 
   public status=true;
-  constructor() { }
+  constructor(private quickService:QuickService) { }
 
   
   modelOfQuick = new QuickPopup('','');
@@ -24,7 +25,19 @@ export class QuickPopupComponent implements OnInit {
   }
 
   onSubmit(){
-    
+    /* console.log(this.modelOfQuick); */
+    this.quickService.postQuickFormData;
+
+    let formdata:any ={
+      
+      "ContactNumber": this.modelOfQuick.mobile,
+      "Email": this.modelOfQuick.email
+      };
+      this.quickService.postQuickFormData(formdata).subscribe(
+        data => {
+          console.log(data);
+        }
+      )
   }
 
   
