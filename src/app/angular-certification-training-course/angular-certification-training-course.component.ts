@@ -3,6 +3,8 @@ import { environment } from 'src/environments/environment.prod';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { Courses } from '../courses';
 
+import { CoursesService } from '../courses.service';
+
 @Component({
   selector: 'app-angular-certification-training-course',
   templateUrl: './angular-certification-training-course.component.html',
@@ -14,7 +16,9 @@ export class AngularCertificationTrainingCourseComponent implements OnInit {
   spinnerType: any;
   spinnerName: any;
   // public baseUrl:string = "https://shreetuitioncenter.com/";
-  constructor(private spinner: NgxSpinnerService) { }
+  public apiUrl:string ="https://www.pixeltk.com/api/";
+  
+  constructor(private spinner: NgxSpinnerService,private coursesService:CoursesService) { }
 
   modelOfCourses = new Courses('','');
 
@@ -22,6 +26,19 @@ export class AngularCertificationTrainingCourseComponent implements OnInit {
 
   onSubmit(){
     console.log(this.modelOfCourses);
+
+    let formdata:any ={
+      
+      "ContactNumber": this.modelOfCourses.mobile,
+      "Email": this.modelOfCourses.email
+      };
+
+      this.coursesService.postCoursesFormData(formdata).subscribe(
+        data => {
+          console.log(data);
+        }
+      )
+
   }
 
   ngOnInit(): void {
