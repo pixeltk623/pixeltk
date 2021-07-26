@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { environment } from 'src/environments/environment.prod';
 import { Courses } from '../courses';
+import { CoursesService } from '../courses.service';
 
 @Component({
   selector: 'app-web-design-certification-training-course',
@@ -9,7 +10,7 @@ import { Courses } from '../courses';
 })
 export class WebDesignCertificationTrainingCourseComponent implements OnInit {
   public baseUrl:string = environment.firebase.baseUrl;
-  constructor() { }
+  constructor(private coursesService:CoursesService) { }
 
   modelOfCourses = new Courses('','');
 
@@ -17,6 +18,18 @@ export class WebDesignCertificationTrainingCourseComponent implements OnInit {
 
   onSubmit(){
     console.log(this.modelOfCourses);
+
+    let formdata:any ={
+      
+      "ContactNumber": this.modelOfCourses.mobile,
+      "Email": this.modelOfCourses.email
+      };
+
+      this.coursesService.postCoursesFormData(formdata).subscribe(
+        data => {
+          console.log(data);
+        }
+      )
   }
 
   ngOnInit(): void {
