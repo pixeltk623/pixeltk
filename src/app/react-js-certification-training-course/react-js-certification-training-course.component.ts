@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { environment } from 'src/environments/environment.prod';
 import { Courses } from '../courses';
 import { CoursesService } from '../courses.service';
+import { Enquiry } from '../enquiry';
 
 @Component({
   selector: 'app-react-js-certification-training-course',
@@ -11,6 +12,9 @@ import { CoursesService } from '../courses.service';
 export class ReactJsCertificationTrainingCourseComponent implements OnInit {
   public baseUrl:string = environment.firebase.baseUrl;
   constructor(private coursesService:CoursesService) { }
+
+
+  modelOfEnquiry = new Enquiry('','','');
 
   modelOfCourses = new Courses('','');
 

@@ -8,8 +8,9 @@
                 <div class="col-sm-7 text-white mt-5">
                     <div>
                         <h3>Have doubt in mind? Let's talk</h3>
-                        <p>Please take a quick moment to complete this form and a business representative will get back to you
-                    swiftly.</p>
+                        <p>Please take a quick moment to complete this form and a business representative will get back
+                            to you
+                            swiftly.</p>
                     </div>
 
                     <div class="callAndEmail">
@@ -17,23 +18,23 @@
                             <h3>Call Us</h3>
                             <p>+91-816-041-0477</p>
                         </div>
-                        
+
                         <div>
                             <h3>Email</h3>
                             <p>info@pixeltk.com</p>
-                            
+
                         </div>
-                       
+
                     </div>
 
-                   
+
                     <div>
                         <h3>Address</h3>
                         <p># D-76, Shiv Tenamnent, Opp - Felix Complex, Gotri Rd, Gotri, Vadodara,
                             Gujarat 390021</p>
                     </div>
-                    
-                    
+
+
 
 
                 </div>
@@ -51,27 +52,35 @@
                             <form (ngSubmit)="onSubmit()" #enquiryForm="ngForm">
                                 <div class="mb-3">
                                     <label for="exampleFormControlInput1" class="form-label">Name</label>
-                                    <input type="text" [class.is-invalid] = "name.invalid && name.touched" class="form-control" id="exampleFormControlInput1"
-                                        placeholder="Name" name="name" [(ngModel)]="modelOfEnquiry.name" #name="ngModel" required>
-                                    
-                                    <span [class.d-none]="name.valid || name.untouched" class="text-danger">Name is Required</span>
+                                    <input type="text" [class.is-invalid]="name.invalid && name.touched"
+                                        class="form-control" id="exampleFormControlInput1" placeholder="Name"
+                                        name="name" [(ngModel)]="modelOfEnquiry.name" #name="ngModel" required>
+
+                                    <span [class.d-none]="name.valid || name.untouched" class="text-danger">Name is
+                                        Required</span>
                                 </div>
                                 <div class="mb-3">
                                     <label for="exampleFormControlInput1" class="form-label">Email</label>
-                                    <input type="email" [class.is-invalid] = "email.invalid && email.touched" class="form-control" id="exampleFormControlInput1"
-                                        placeholder="Email" name="email" [(ngModel)]="modelOfEnquiry.email" #email="ngModel" required>
+                                    <input type="email" [class.is-invalid]="email.invalid && email.touched"
+                                        class="form-control" id="exampleFormControlInput1" placeholder="Email"
+                                        name="email" [(ngModel)]="modelOfEnquiry.email" #email="ngModel" required>
 
-                                        <span [class.d-none]="email.valid || email.untouched" class="text-danger">Email is Required</span>
+                                    <span [class.d-none]="email.valid || email.untouched" class="text-danger">Email is
+                                        Required</span>
                                 </div>
                                 <div class="mb-3">
                                     <label for="exampleFormControlInput1" class="form-label">Mobile</label>
-                                    <input type="text" [class.is-invalid] = "mobile.invalid && mobile.touched" class="form-control" name="mobile" id="exampleFormControlInput1"
-                                        placeholder="Mobile" [(ngModel)]="modelOfEnquiry.mobile" #mobile="ngModel" required>
+                                    <input type="tel" [class.is-invalid]="mobile.invalid && mobile.touched"
+                                        class="form-control" name="mobile" id="exampleFormControlInput1"
+                                        placeholder="Mobile" [(ngModel)]="modelOfEnquiry.mobile" #mobile="ngModel"
+                                        required>
 
-                                        <span [class.d-none]="mobile.valid || mobile.untouched" class="text-danger">Mobile is Required</span>
+                                    <span [class.d-none]="mobile.valid || mobile.untouched" class="text-danger">Mobile
+                                        is Required</span>
                                 </div>
                                 <div class="mb-3 text-center">
-                                    <button class="btn btn-primary" [class.disabled]="enquiryForm.valid==false">Submit</button>
+                                    <button class="btn btn-primary"
+                                        [class.disabled]="enquiryForm.valid==false">Submit</button>
                                 </div>
                             </form>
                         </div>
