@@ -1,4 +1,4 @@
-<section>
+<section> 
     <div class="container">
         <div class="course_details">
 
@@ -76,19 +76,27 @@
                         <h3 id="advisors">Not sure? Talk to our advisors</h3>
                         <p>Drop your email and phone no. our advisors will get you soon</p>
 
+                        
+                          <div *ngIf="alert" class="alert alert-warning alert-dismissible fade show w-75" role="alert">
+                            <strong>Your form is submitted</strong> 
+                            <button (click) ="closeAlert()" type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                          </div>
+
+
+
                         <form (ngSubmit)="onSubmit()" #enquiryForm="ngForm">
                             <div class="mb-3">
                                 <input type="email" class="form-control w-75" id="exampleFormControlInput1"
                                     placeholder="Email" name="email" [class.is-invalid] = "email.invalid && email.touched"  [(ngModel)]="modelOfCourses.email" #email="ngModel" required>
 
-                                    <span [class.d-none]="email.valid || email.untouched" class="text-danger">Email is Required</span>
+                                    <span [class.d-none]="email.valid || email.untouched" class="text-white">Email is Required</span>
                             </div>
                             <div class="mb-3">
-                                <input type="email" class="form-control w-75" id="exampleFormControlInput1"
+                                <input type="number" class="form-control w-75" id="exampleFormControlInput1"
                                     placeholder="Phone" [class.is-invalid] = "mobile.invalid && mobile.touched" 
                                      [(ngModel)]="modelOfCourses.mobile" #mobile="ngModel" required>
 
-                                     <span [class.d-none]="mobile.valid || mobile.untouched" class="text-danger">Mobile is Required</span>
+                                     <span [class.d-none]="mobile.valid || mobile.untouched" class="text-white">Mobile is Required</span>
                             </div>
                             <button class="btn text-white" style="background-color: #1dcea6;" [class.disabled]="enquiryForm.valid==false">Send</button>
 

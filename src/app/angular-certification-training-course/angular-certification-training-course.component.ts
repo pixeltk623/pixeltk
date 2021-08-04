@@ -20,7 +20,9 @@ export class AngularCertificationTrainingCourseComponent implements OnInit {
   
   constructor(private spinner: NgxSpinnerService,private coursesService:CoursesService) { }
 
-  modelOfCourses = new Courses('','');
+  modelOfCourses  = new Courses('','');
+
+  alert:boolean = false;
 
   isdisabled:boolean = true;
 
@@ -36,9 +38,11 @@ export class AngularCertificationTrainingCourseComponent implements OnInit {
       this.coursesService.postCoursesFormData(formdata).subscribe(
         data => {
           console.log(data);
+          this.alert =true;
+          
         }
       )
-
+    
   }
 
   ngOnInit(): void {
@@ -49,6 +53,12 @@ export class AngularCertificationTrainingCourseComponent implements OnInit {
       /** spinner ends after 5 seconds */
       this.spinner.hide();
     }, 1000);
+  }
+
+ 
+
+  closeAlert(){
+    this.alert=false;
   }
 
 }
