@@ -15,6 +15,8 @@ export class PhpCertificationTrainingCourseComponent implements OnInit {
 
   modelOfCourses = new Courses('','');
 
+  alert:boolean = false;
+
   isdisabled:boolean = true;
 
   onSubmit(){
@@ -29,12 +31,17 @@ export class PhpCertificationTrainingCourseComponent implements OnInit {
       this.coursesService.postCoursesFormData(formdata).subscribe(
         data => {
           console.log(data);
+          this.alert =true;
         }
       )
   }
 
   ngOnInit(): void {
     console.log(this.modelOfCourses)
+  }
+
+  closeAlert(){
+    this.alert=false;
   }
 
 }
