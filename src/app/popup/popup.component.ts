@@ -13,6 +13,8 @@ export class PopupComponent implements OnInit {
 
   modelOfPopup = new Popup('','','',);
 
+  alert:boolean = false;
+
   isdisabled:boolean =true;
 
   ngOnInit(): void {
@@ -29,8 +31,13 @@ export class PopupComponent implements OnInit {
     this.popService.postPopupFormData(formdata).subscribe(
       data => {
         console.log(data);
+        this.alert =true;
       }
     )
+  }
+
+  closeAlert(){
+    this.alert=false;
   }
 
 }

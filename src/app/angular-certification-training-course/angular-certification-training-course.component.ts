@@ -16,18 +16,31 @@ export class AngularCertificationTrainingCourseComponent implements OnInit {
   public baseUrl:string = environment.firebase.baseUrl;
   spinnerType: any;
   spinnerName: any;
+  Courses:any;
   // public baseUrl:string = "https://shreetuitioncenter.com/";
   
   
   constructor(private spinner: NgxSpinnerService,private coursesService:CoursesService, ) { }
 
   modelOfEnquiry = new Enquiry('','','','','');
+<<<<<<< HEAD
   
   modelOfCourses = new Courses('','');
+=======
+
+  modelOfCourses:any  = new Courses('','');
+
+  alert:boolean = false;
+
+>>>>>>> 4e5f153a26f1608f30ce7d269357195d2b48ae4f
   isdisabled:boolean = true;
+
+  
 
   onSubmit(){
     console.log(this.modelOfCourses);
+    
+    
 
     let formdata:any ={
       
@@ -41,9 +54,14 @@ export class AngularCertificationTrainingCourseComponent implements OnInit {
       this.coursesService.postCoursesFormData(formdata).subscribe(
         data => {
           console.log(data);
+          this.alert =true;
+          this.modelOfCourses ='';
+          
+          
+         
         }
       )
-
+    
   }
 
   ngOnInit(): void {
@@ -56,6 +74,16 @@ export class AngularCertificationTrainingCourseComponent implements OnInit {
       this.spinner.hide();
     }, 1000);
   }
+
+ 
+
+  closeAlert(){
+    this.alert=false;
+  }
+
+  
+
+  
 
 }
 

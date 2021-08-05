@@ -15,6 +15,8 @@ export class QuickPopupComponent implements OnInit {
   
   modelOfQuick = new QuickPopup('','');
 
+  alert:boolean = false;
+
   isdisabled:boolean =true;
 
   ngOnInit(): void {
@@ -36,8 +38,13 @@ export class QuickPopupComponent implements OnInit {
       this.quickService.postQuickFormData(formdata).subscribe(
         data => {
           console.log(data);
+          this.alert =true;
         }
       )
+  }
+
+  closeAlert(){
+    this.alert=false;
   }
 
   

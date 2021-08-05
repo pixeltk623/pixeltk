@@ -17,6 +17,8 @@ export class WebDesignCertificationTrainingCourseComponent implements OnInit {
 
   modelOfCourses = new Courses('','');
 
+  alert:boolean = false;
+
   isdisabled:boolean = true;
 
   onSubmit(){
@@ -31,6 +33,7 @@ export class WebDesignCertificationTrainingCourseComponent implements OnInit {
       this.coursesService.postCoursesFormData(formdata).subscribe(
         data => {
           console.log(data);
+          this.alert =true;
         }
       )
   }
@@ -38,4 +41,9 @@ export class WebDesignCertificationTrainingCourseComponent implements OnInit {
   ngOnInit(): void {
     console.log(this.modelOfCourses)
   }
+
+  closeAlert(){
+    this.alert=false;
+  }
+
 }
