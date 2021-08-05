@@ -35,5 +35,4 @@ export class WebDesignCertificationTrainingCourseComponent implements OnInit {
   ngOnInit(): void {
     console.log(this.modelOfCourses)
   }
-
 }

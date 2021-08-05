@@ -4,6 +4,7 @@ import { NgxSpinnerService } from 'ngx-spinner';
 import { Courses } from '../courses';
 
 import { CoursesService } from '../courses.service';
+import { Enquiry } from '../enquiry';
 
 @Component({
   selector: 'app-angular-certification-training-course',
@@ -18,10 +19,11 @@ export class AngularCertificationTrainingCourseComponent implements OnInit {
   // public baseUrl:string = "https://shreetuitioncenter.com/";
   
   
-  constructor(private spinner: NgxSpinnerService,private coursesService:CoursesService) { }
+  constructor(private spinner: NgxSpinnerService,private coursesService:CoursesService, ) { }
 
+  modelOfEnquiry = new Enquiry('','','','','');
+  
   modelOfCourses = new Courses('','');
-
   isdisabled:boolean = true;
 
   onSubmit(){
@@ -30,7 +32,10 @@ export class AngularCertificationTrainingCourseComponent implements OnInit {
     let formdata:any ={
       
       "ContactNumber": this.modelOfCourses.mobile,
-      "Email": this.modelOfCourses.email
+      "Email": this.modelOfCourses.email,
+
+      
+
       };
 
       this.coursesService.postCoursesFormData(formdata).subscribe(
@@ -42,6 +47,7 @@ export class AngularCertificationTrainingCourseComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    console.log(this.modelOfEnquiry)
     this.spinner.show();
     console.log(this.modelOfCourses)
 

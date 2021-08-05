@@ -1,6 +1,6 @@
 import { Component, ViewChild, OnInit, OnDestroy } from '@angular/core';
 import { NgxSpinnerService } from 'ngx-spinner';
-
+import { Route, Router } from '@angular/router';
 import { LiveChatWidgetModel, LiveChatWidgetApiModel } from '@livechat/angular-widget';
 import { Subscription } from 'rxjs';
 
@@ -11,6 +11,7 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit, OnDestroy {
+  public href: string = "";
 
   @ViewChild('liveChatWidget')
   liveChatWidget!: LiveChatWidgetModel;
@@ -23,13 +24,15 @@ export class AppComponent implements OnInit, OnDestroy {
  
   licenseId:any= "60f13155d6e7610a49ab8a47"
 
-  constructor(private spinner: NgxSpinnerService) { }
+  constructor(private spinner: NgxSpinnerService, private router: Router) { }
 
   onChatLoaded(api: LiveChatWidgetApiModel) {
     this.liveChatApi = api;
   }
 
   ngOnInit() {
+    this.href = this.router.url;
+    console.log(this.router.url);
     /** spinner starts on init */
     this.spinner.show();
 

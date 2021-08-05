@@ -8,8 +8,9 @@
                 <div class="col-sm-7 text-white mt-5">
                     <div>
                         <h3>Have doubt in mind? Let's talk</h3>
-                        <p>Please take a quick moment to complete this form and a business representative will get back to you
-                    swiftly.</p>
+                        <p>Please take a quick moment to complete this form and a business representative will get back
+                            to you
+                            swiftly.</p>
                     </div>
 
                     <div class="callAndEmail">
@@ -17,61 +18,108 @@
                             <h3>Call Us</h3>
                             <p>+91-816-041-0477</p>
                         </div>
-                        
+
                         <div>
                             <h3>Email</h3>
                             <p>info@pixeltk.com</p>
-                            
+
                         </div>
-                       
+
                     </div>
 
-                   
+
                     <div>
                         <h3>Address</h3>
                         <p># D-76, Shiv Tenamnent, Opp - Felix Complex, Gotri Rd, Gotri, Vadodara,
                             Gujarat 390021</p>
                     </div>
-                    
-                    
+
+
 
 
                 </div>
                 <div class="col-sm-5">
-                    <div class="card mt-5">
+                    <div class="card mt-3">
                         <div class="card-body">
                             <h5 class="card-title text-muted text-center">Please Share the details</h5>
 
                             <!-- {{modelOfEnquiry | json}}
                             <hr>
 
-                            {{enquiryForm.value | json}} -->
+                            {{enquiryForm.value | json}}
 
-                            <!-- {{enquiryForm.valid | json}} -->
+                            {{enquiryForm.valid | json}} -->
                             <form (ngSubmit)="onSubmit()" #enquiryForm="ngForm">
-                                <div class="mb-3">
+                                <div class="mb-2">
                                     <label for="exampleFormControlInput1" class="form-label">Name</label>
-                                    <input type="text" [class.is-invalid] = "name.invalid && name.touched" class="form-control" id="exampleFormControlInput1"
-                                        placeholder="Name" name="name" [(ngModel)]="modelOfEnquiry.name" #name="ngModel" required>
-                                    
-                                    <span [class.d-none]="name.valid || name.untouched" class="text-danger">Name is Required</span>
+                                    <input type="text" [class.is-invalid]="name.invalid && name.touched"
+                                        class="form-control" id="exampleFormControlInput1" placeholder="Name"
+                                        name="name" [(ngModel)]="modelOfEnquiry.name" #name="ngModel" required>
+
+                                    <span [class.d-none]="name.valid || name.untouched" class="text-danger">Name is
+                                        Required</span>
                                 </div>
-                                <div class="mb-3">
+                                <div class="mb-2">
                                     <label for="exampleFormControlInput1" class="form-label">Email</label>
-                                    <input type="email" [class.is-invalid] = "email.invalid && email.touched" class="form-control" id="exampleFormControlInput1"
-                                        placeholder="Email" name="email" [(ngModel)]="modelOfEnquiry.email" #email="ngModel" required>
+                                    <input type="email" [class.is-invalid]="email.invalid && email.touched"
+                                        class="form-control" id="exampleFormControlInput1" placeholder="Email"
+                                        name="email" [(ngModel)]="modelOfEnquiry.email" #email="ngModel" required>
 
-                                        <span [class.d-none]="email.valid || email.untouched" class="text-danger">Email is Required</span>
+                                    <span [class.d-none]="email.valid || email.untouched" class="text-danger">Email is
+                                        Required</span>
                                 </div>
-                                <div class="mb-3">
+                                <div class="mb-2">
                                     <label for="exampleFormControlInput1" class="form-label">Mobile</label>
-                                    <input type="text" [class.is-invalid] = "mobile.invalid && mobile.touched" class="form-control" name="mobile" id="exampleFormControlInput1"
-                                        placeholder="Mobile" [(ngModel)]="modelOfEnquiry.mobile" #mobile="ngModel" required>
+                                    <input type="text" [class.is-invalid]="mobile.invalid && mobile.touched"
+                                        class="form-control" name="mobile" id="exampleFormControlInput1"
+                                        placeholder="Mobile" [(ngModel)]="modelOfEnquiry.mobile" #mobile="ngModel"
+                                        required>
 
-                                        <span [class.d-none]="mobile.valid || mobile.untouched" class="text-danger">Mobile is Required</span>
+                                    <span [class.d-none]="mobile.valid || mobile.untouched" class="text-danger">Mobile
+                                        is Required</span>
                                 </div>
-                                <div class="mb-3 text-center">
-                                    <button class="btn btn-primary" [class.disabled]="enquiryForm.valid==false">Submit</button>
+
+                                <div class="mb-2">
+                                    <label for="exampleFormControlInput1" class="form-label">Our Courses</label>
+                                    <select name="course" [class.is-invalid]="course.invalid && course.touched"
+                                        class="form-select" [(ngModel)]="modelOfEnquiry.course" #course="ngModel"
+                                        required>
+                                        <option value="">Select Course</option>
+                                        <option value="{{item.course_id}}" *ngFor="let item of allCourses">
+                                            {{item.course_name}}</option>
+                                    </select>
+
+                                    <span *ngIf="courseState">
+                                        Course is Not Selected
+                                    </span>
+
+                                    <span [class.d-none]="course.valid || course.untouched" class="text-danger">Course
+                                        is Required</span>
+                                </div>
+
+                                <!-- <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="gender" id="flexRadioDefault1"
+                                        value="Male" [(ngModel)]="modelOfEnquiry.gender" #gender="ngModel" required>
+                                    <label class="form-check-label" for="flexRadioDefault1">
+                                        Male
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="gender" id="flexRadioDefault2"
+                                        value="Female" [(ngModel)]="modelOfEnquiry.gender" #gender="ngModel" required>
+                                    <label class="form-check-label" for="flexRadioDefault2">
+                                        Female
+                                    </label>
+                                </div>
+
+                                
+                                <span [class.d-none]="gender.valid || gender.untouched" class="text-danger">Gender
+                                    is Required</span> -->
+
+
+                                <div class="mb-2 text-center">
+                                    <button class="btn btn-primary"
+                                        [class.disabled]="enquiryForm.valid==false">Submit</button>
                                 </div>
                             </form>
                         </div>
