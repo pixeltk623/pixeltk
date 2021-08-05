@@ -17,22 +17,15 @@ export class AngularCertificationTrainingCourseComponent implements OnInit {
   spinnerType: any;
   spinnerName: any;
   Courses:any;
+  alert!: boolean;
   // public baseUrl:string = "https://shreetuitioncenter.com/";
   
   
   constructor(private spinner: NgxSpinnerService,private coursesService:CoursesService, ) { }
 
   modelOfEnquiry = new Enquiry('','','','','');
-<<<<<<< HEAD
   
-  modelOfCourses = new Courses('','');
-=======
-
-  modelOfCourses:any  = new Courses('','');
-
-  alert:boolean = false;
-
->>>>>>> 4e5f153a26f1608f30ce7d269357195d2b48ae4f
+  modelOfCourses :any= new Courses('','');
   isdisabled:boolean = true;
 
   
@@ -56,6 +49,7 @@ export class AngularCertificationTrainingCourseComponent implements OnInit {
           console.log(data);
           this.alert =true;
           this.modelOfCourses ='';
+         
           
           
          
@@ -86,5 +80,3 @@ export class AngularCertificationTrainingCourseComponent implements OnInit {
   
 
 }
-
-
