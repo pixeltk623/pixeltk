@@ -246,21 +246,45 @@
                             <h5 class="card-title">Get in touch with our expert technical advisor</h5>
                             <p class="card-text">Enroll in online/offline programs built with top industry standards,
                                 with dedicated mentorship and expert career guidance</p>
-                            <form>
+
+
+                               <form (ngSubmit)="onSubmit()" #enquiryForm1="ngForm">
                                 <div class="form-group">
-                                    <input type="text" name="" class="form-control" placeholder="Name">
+                                    <label for="exampleFormControlInput1" class="form-label">Name</label>
+                                    <input type="text" [class.is-invalid]="name1.invalid && name1.touched"
+                                        class="form-control" id="exampleFormControlInput3" placeholder="Name"
+                                        name="name1" [(ngModel)]="modelOfEnquiry.name" #name1="ngModel" required>
+
+                                    <span [class.d-none]="name1.valid || name1.untouched" class="text-danger">Name is
+                                        Required</span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput1" class="form-label">Email</label>
+                                    <input type="email" [class.is-invalid]="email1.invalid && email1.touched"
+                                        class="form-control" id="exampleFormControlInput4" placeholder="Email"
+                                        name="email1" [(ngModel)]="modelOfEnquiry.email" #email1="ngModel" required>
+
+                                    <span [class.d-none]="email1.valid || email1.untouched" class="text-danger">Email is
+                                        Required</span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput1" class="form-label">Mobile</label>
+                                    <input type="number" [class.is-invalid]="mobile1.invalid && mobile1.touched"
+                                        class="form-control" name="mobile1" id="exampleFormControlInput5"
+                                        placeholder="Mobile" [(ngModel)]="modelOfEnquiry.mobile" #mobile1="ngModel"
+                                        required>
+
+                                    <span [class.d-none]="mobile1.valid || mobile1.untouched" class="text-danger">Mobile
+                                        is Required</span>
                                 </div>
                                 <br>
-                                <div class="form-group">
-                                    <input type="text" name="" class="form-control" placeholder="Email">
+                                <div class="mb-3 text-center">
+                                    <button class="btn btn-primary"
+                                    [class.disabled]="enquiryForm1.valid==false">Submit</button>
                                 </div>
-                                <br>
-                                <div class="form-group">
-                                    <input type="text" name="" class="form-control" placeholder="Mobile">
-                                </div>
-                                <br>
-                                <button class="btn text-white btn-sm" style="background-color: #1dcea6;">Enroll Now</button>
                             </form>
+
+                            
                         </div>
                     </div>
                 </div>
