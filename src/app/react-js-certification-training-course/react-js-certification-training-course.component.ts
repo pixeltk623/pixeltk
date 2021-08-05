@@ -14,7 +14,7 @@ export class ReactJsCertificationTrainingCourseComponent implements OnInit {
   constructor(private coursesService:CoursesService) { }
 
 
-  modelOfEnquiry = new Enquiry('','','');
+  modelOfEnquiry = new Enquiry('','','','','');
 
   modelOfCourses = new Courses('','');
 

@@ -21,7 +21,7 @@ export class AngularCertificationTrainingCourseComponent implements OnInit {
   
   constructor(private spinner: NgxSpinnerService,private coursesService:CoursesService, ) { }
 
-  modelOfEnquiry = new Enquiry('','','');
+  modelOfEnquiry = new Enquiry('','','','','');
   
   modelOfCourses = new Courses('','');
   isdisabled:boolean = true;
