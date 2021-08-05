@@ -14,7 +14,7 @@ export class PhpCertificationTrainingCourseComponent implements OnInit {
   public baseUrl:string = environment.firebase.baseUrl;
   constructor(private coursesService:CoursesService) { }
  
-  modelOfEnquiry = new Enquiry('','',''); 
+  modelOfEnquiry = new Enquiry('','','','',''); 
 
   modelOfCourses = new Courses('','');
 

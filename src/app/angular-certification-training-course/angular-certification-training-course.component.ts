@@ -22,16 +22,12 @@ export class AngularCertificationTrainingCourseComponent implements OnInit {
   
   constructor(private spinner: NgxSpinnerService,private coursesService:CoursesService, ) { }
 
-<<<<<<< HEAD
+  modelOfEnquiry = new Enquiry('','','','','');
+
   modelOfCourses:any  = new Courses('','');
 
   alert:boolean = false;
 
-=======
-  modelOfEnquiry = new Enquiry('','','');
-  
-  modelOfCourses = new Courses('','');
->>>>>>> 69435c23b127bd1bd555da4740708683568c4dff
   isdisabled:boolean = true;
 
   
