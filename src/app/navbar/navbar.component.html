@@ -1,51 +1,51 @@
 <section style="margin-top: 38px;">
-<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <a class="navbar-brand" [routerLink]="['']" routerLinkActive="router-link-active" >
-        <img src="{{baseUrl}}assets/images/PTK.png" alt="" width="70" height="70">
-      </a>
-      <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        
-         
-           <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            All Courses
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <li><a class="dropdown-item" [routerLink]="['/courses/angular-certification-training-course']" routerLinkActive="router-link-active" >Angular Certification Course</a></li>
-            <li><a class="dropdown-item" [routerLink]="['/courses/react-js-certification-training-course']" routerLinkActive="router-link-active" >React Js Certification Course</a></li>
-            <li><a class="dropdown-item" [routerLink]="['/courses/web-design-certification-training-course']" routerLinkActive="router-link-active" >Web Design Certification Course</a></li>
-            <li><a class="dropdown-item" [routerLink]="['/courses/java-certification-training-course']" routerLinkActive="router-link-active" >Java Certification Course</a></li>
-            <li><a class="dropdown-item" [routerLink]="['/courses/php-certification-training-course']" routerLinkActive="router-link-active" >PHP Certification Course</a></li>
-            <li><a class="dropdown-item" [routerLink]="['/courses/laravel-certification-training-course']" routerLinkActive="router-link-active" >Laravel Certification Course</a></li>
-          </ul>
-        </li>
-        <!-- <li class="nav-item dropdown">
+  <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" [routerLink]="['']" routerLinkActive="router-link-active" >
+          <img src="{{baseUrl}}assets/images/PTK.png" alt="" width="70" height="70">
+        </a>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          
+           
+             <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Master Program Courses
+              All Courses
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <li><a class="dropdown-item" href="#">Full Stack Web Development</a></li>
-              <li><a class="dropdown-item" href="#">MEAN Stack</a></li>
-              <li><a class="dropdown-item" href="#">MEARN Stack</a></li>
+              <li><a class="dropdown-item" [routerLink]="['/courses/angular-certification-training-course']" routerLinkActive="router-link-active" >Angular Certification Course</a></li>
+              <li><a class="dropdown-item" [routerLink]="['/courses/react-js-certification-training-course']" routerLinkActive="router-link-active" >React Js Certification Course</a></li>
+              <li><a class="dropdown-item" [routerLink]="['/courses/web-design-certification-training-course']" routerLinkActive="router-link-active" >Web Design Certification Course</a></li>
+              <li><a class="dropdown-item" [routerLink]="['/courses/java-certification-training-course']" routerLinkActive="router-link-active" >Java Certification Course</a></li>
+              <li><a class="dropdown-item" [routerLink]="['/courses/php-certification-training-course']" routerLinkActive="router-link-active" >PHP Certification Course</a></li>
+              <li><a class="dropdown-item" [routerLink]="['/courses/laravel-certification-training-course']" routerLinkActive="router-link-active" >Laravel Certification Course</a></li>
             </ul>
-          </li> -->
-          <li class="nav-item">
-            <a class="nav-link"[routerLink]="['/enquiry']" routerLinkActive="router-link-active"  tabindex="-1" aria-disabled="true">Enquiry</a>
           </li>
-          <!-- <li class="nav-item">
-            <a class="nav-link"[routerLink]="['/blog']" routerLinkActive="router-link-active"  tabindex="-1" aria-disabled="true">Blog</a>
-          </li> -->
-        </ul>
-        <span class="navbar-text">
-            <img src="{{baseUrl}}assets/images/call.svg" alt="">
-            <a [href]="'tel:' + Phone" style="text-decoration: none;"> {{Phone}}</a>
-          </span>
+          <!-- <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Master Program Courses
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="#">Full Stack Web Development</a></li>
+                <li><a class="dropdown-item" href="#">MEAN Stack</a></li>
+                <li><a class="dropdown-item" href="#">MEARN Stack</a></li>
+              </ul>
+            </li> -->
+            <li class="nav-item">
+              <a class="nav-link"[routerLink]="['/enquiry']" routerLinkActive="router-link-active"  tabindex="-1" aria-disabled="true">Enquiry</a>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link"[routerLink]="['/blog']" routerLinkActive="router-link-active"  tabindex="-1" aria-disabled="true">Blog</a>
+            </li> -->
+          </ul>
+          <span class="navbar-text">
+              <img src="{{baseUrl}}assets/images/call.svg" alt="">
+              <a [href]="'tel:' + Phone" style="text-decoration: none;"> {{Phone}}</a>
+            </span>
+        </div>
       </div>
-    </div>
-  </nav>
-</section>
+    </nav>
+  </section>

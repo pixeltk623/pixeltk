@@ -13,6 +13,7 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { BlogComponent } from './blog/blog.component';
 import { PopupComponent } from './popup/popup.component';
 import { QuickPopupComponent } from './quick-popup/quick-popup.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 const routes: Routes = [
   { path: '', component: MainComponent },
@@ -27,6 +28,8 @@ const routes: Routes = [
   { path: 'blog', component: BlogComponent },
   { path: 'popup', component:PopupComponent},
   { path: 'quick-popup', component:QuickPopupComponent},
+
+  { path: 'dashboard', component:DashboardComponent},
   
 
   { path: '**', component: NotFoundComponent }

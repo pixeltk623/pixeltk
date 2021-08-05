@@ -48,6 +48,7 @@ import { BlogComponent } from './blog/blog.component';
 import { PopupComponent } from './popup/popup.component';
 import { QuickPopupComponent } from './quick-popup/quick-popup.component';
 import { HttpClientModule } from '@angular/common/http';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 
 @NgModule({
@@ -70,7 +71,8 @@ import { HttpClientModule } from '@angular/common/http';
     ContactUsComponent,
     BlogComponent,
     PopupComponent,
-    QuickPopupComponent
+    QuickPopupComponent,
+    DashboardComponent
     
   ],
   entryComponents:[DialogComponent],

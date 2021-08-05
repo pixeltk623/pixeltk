@@ -12,9 +12,8 @@ h1 {
     background-position: 100% 100%;
     padding-bottom: 40px;
     background-size: 140px;
-    width: 50%;
+    /* width: 50%; */
 }
-
 ul li {
     opacity: .81;
     font-size: 16px;
@@ -80,4 +79,21 @@ ul#key li {
     .course_details {
         width: 100%;
     }
+    .course-title {
+        font-size: 28px;
+    }
+
+    ul#key li {
+        display: block;
+        width: 100%;
+        font-size: 14px;
+    
+    }
 }
+/* 
+ul#key li {
+    display: block;
+    width: 100%;
+    font-size: 14px;
+
+} */

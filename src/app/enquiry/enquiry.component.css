@@ -9,12 +9,12 @@
 .enquiry {
     background-color: #686894;
     width: 100%; 
-    height: 450px;
+    height: 550px;
 }
 
 @media screen and (min-width: 320px) and (max-width: 780px){
     .enquiry {
      
-        height: 850px;
+        height: 910px;
     }
 }
