@@ -15,19 +15,24 @@ export class AngularCertificationTrainingCourseComponent implements OnInit {
   public baseUrl:string = environment.firebase.baseUrl;
   spinnerType: any;
   spinnerName: any;
+  Courses:any;
   // public baseUrl:string = "https://shreetuitioncenter.com/";
   
   
   constructor(private spinner: NgxSpinnerService,private coursesService:CoursesService) { }
 
-  modelOfCourses  = new Courses('','');
+  modelOfCourses:any  = new Courses('','');
 
   alert:boolean = false;
 
   isdisabled:boolean = true;
 
+  
+
   onSubmit(){
     console.log(this.modelOfCourses);
+    
+    
 
     let formdata:any ={
       
@@ -39,7 +44,10 @@ export class AngularCertificationTrainingCourseComponent implements OnInit {
         data => {
           console.log(data);
           this.alert =true;
+          this.modelOfCourses ='';
           
+          
+         
         }
       )
     
@@ -60,5 +68,9 @@ export class AngularCertificationTrainingCourseComponent implements OnInit {
   closeAlert(){
     this.alert=false;
   }
+
+  
+
+  
 
 }
