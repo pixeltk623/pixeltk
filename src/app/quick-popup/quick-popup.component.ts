@@ -13,7 +13,7 @@ export class QuickPopupComponent implements OnInit {
   constructor(private quickService:QuickService) { }
 
   
-  modelOfQuick = new QuickPopup('','');
+  modelOfQuick:any = new QuickPopup('','');
 
   alert:boolean = false;
 
@@ -39,6 +39,7 @@ export class QuickPopupComponent implements OnInit {
         data => {
           console.log(data);
           this.alert =true;
+          this. modelOfQuick ='';
         }
       )
   }

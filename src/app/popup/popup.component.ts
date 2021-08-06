@@ -11,7 +11,7 @@ export class PopupComponent implements OnInit {
 
   constructor(private popService:PopService) { }
 
-  modelOfPopup = new Popup('','','',);
+  modelOfPopup:any = new Popup('','','',);
 
   alert:boolean = false;
 
@@ -32,6 +32,7 @@ export class PopupComponent implements OnInit {
       data => {
         console.log(data);
         this.alert =true;
+        this.modelOfPopup ='';
       }
     )
   }

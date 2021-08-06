@@ -15,7 +15,7 @@ export class LaravelCertificationTrainingCourseComponent implements OnInit {
   
   modelOfEnquiry = new Enquiry('','','','','');
 
-  modelOfCourses = new Courses('','');
+  modelOfCourses:any = new Courses('','');
 
   alert:boolean = false;
 
@@ -34,6 +34,7 @@ export class LaravelCertificationTrainingCourseComponent implements OnInit {
         data => {
           console.log(data);
           this.alert =true;
+          this.modelOfCourses ='';
         }
       )
   }

@@ -12,5 +12,5 @@ export class CoursesService {
   postCoursesFormData(data:any){
      console.log(data); 
      return this.http.post<any>(this.apiUrl+"add_inquiry.php",data) 
-  }
+  } 
 }
